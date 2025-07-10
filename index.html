@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Game Site</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome (for search icon) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎮 Welcome to My Game Downloads</h1>
+
+    <!-- Search Box -->
+    <div class="search-box">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" id="searchInput" placeholder="Search games..." />
+    </div>
+
+    <!-- Game List -->
+    <div class="game-list" id="gameList">
+      <div class="game-box">
+        <h2>Ball Game</h2>
+        <p>Size: 30 MB</p>
+        <a href="games/ballgame.zip" download class="download-btn">⬇️ Download</a>
+      </div>
+
+      <div class="game-box">
+        <h2>Jet Adventure</h2>
+        <p>Size: 45 MB</p>
+        <a href="games/jetadventure.zip" download class="download-btn">⬇️ Download</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 🔍 Search filter logic
+    const searchInput = document.getElementById("searchInput");
+    const gameList = document.getElementById("gameList");
+
+    searchInput.addEventListener("input", () => {
+      const filter = searchInput.value.toLowerCase();
+      const games = gameList.getElementsByClassName("game-box");
+
+      for (let i = 0; i < games.length; i++) {
+        const title = games[i].getElementsByTagName("h2")[0].textContent.toLowerCase();
+        games[i].style.display = title.includes(filter) ? "" : "none";
+      }
+    });
+  </script>
+</body>
+</html>

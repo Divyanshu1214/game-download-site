@@ -1,0 +1,66 @@
+body {
+  font-family: sans-serif;
+  background: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  background: transparent;
+}
+
+.search-icon {
+  margin-right: 10px;
+  color: #555;
+}
+
+.game-box {
+  background-color: #e6f7ff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px 0;
+}
+
+.download-btn {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.download-btn:hover {
+  background: #0056b3;
+}
